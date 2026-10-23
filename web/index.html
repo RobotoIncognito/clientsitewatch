@@ -1,0 +1,90 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ClientSiteWatch</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F6F8}
+a{color:#0B6E4F}a:hover{color:#08523B}
+.btn{display:inline-block;padding:14px 24px;border-radius:6px;background:#0B6E4F;color:#fff;font-weight:600;text-decoration:none}
+.btn:hover{background:#08523B;color:#fff}
+.card{background:#fff;border:1px solid #D9DEE5;border-radius:10px;padding:24px}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+</style>
+</head><body>
+
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif;color:#0F1B2D;line-height:1.55">
+
+<header class="wrap" style="padding-top:20px;padding-bottom:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
+<div style="font-weight:600;font-size:20px">ClientSiteWatch</div>
+<a class="btn" href="/app.html">Reserve a spot</a>
+</header>
+
+<section class="wrap" style="padding-top:56px;padding-bottom:72px;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<div style="flex:1 1 440px">
+<p class="mono" style="margin:0 0 16px;font-size:14px;color:#4A5568">Weekly security checks for agencies and freelance web developers</p>
+<h1 style="margin:0 0 20px;font-size:52px;line-height:1.1;font-weight:600;letter-spacing:-0.02em">Know when a client’s website goes wrong before the client does.</h1>
+<p style="margin:0 0 32px;font-size:20px;color:#4A5568;max-width:560px">ClientSiteWatch checks every client domain each week, flags what changed, and gives you a one-page report to forward.</p>
+<a class="btn" href="/app.html">Reserve your spot</a>
+<span style="margin-left:16px;color:#4A5568">From $15/month</span>
+</div>
+<div class="card" style="flex:1 1 360px;max-width:480px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px">
+<strong>Weekly report</strong>
+<span class="mono" style="font-size:14px;color:#4A5568">example.com</span>
+</div>
+<div style="display:flex;gap:16px;padding:14px 0;border-top:1px solid #D9DEE5"><span class="mono" style="min-width:84px;font-size:13px;font-weight:500;color:#A04A08">CHANGED</span><span>New subdomain seen: staging.example.com</span></div>
+<div style="display:flex;gap:16px;padding:14px 0;border-top:1px solid #D9DEE5"><span class="mono" style="min-width:84px;font-size:13px;font-weight:500;color:#A04A08">ACTION</span><span>TLS certificate expires in 11 days</span></div>
+<div style="display:flex;gap:16px;padding:14px 0;border-top:1px solid #D9DEE5"><span class="mono" style="min-width:84px;font-size:13px;font-weight:500;color:#0B6E4F">OK</span><span>SPF and DMARC records present</span></div>
+<p style="margin:12px 0 0;font-size:13px;color:#4A5568">Example data</p>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:72px">
+<h2 style="margin:0 0 32px;font-size:32px;font-weight:600">How it works</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+<div class="card"><div class="mono" style="color:#0B6E4F;font-weight:500;margin-bottom:8px">01</div><h3 style="margin:0 0 8px;font-size:20px">Prove you own the domain</h3><p style="margin:0;color:#4A5568">Add one DNS TXT record. Nothing is checked until it’s verified.</p></div>
+<div class="card"><div class="mono" style="color:#0B6E4F;font-weight:500;margin-bottom:8px">02</div><h3 style="margin:0 0 8px;font-size:20px">We check it every week</h3><p style="margin:0;color:#4A5568">Public DNS and certificate records, TLS, security headers and domain expiry.</p></div>
+<div class="card"><div class="mono" style="color:#0B6E4F;font-weight:500;margin-bottom:8px">03</div><h3 style="margin:0 0 8px;font-size:20px">Forward the report</h3><p style="margin:0;color:#4A5568">Get an email when something changes, plus a one-page PDF you can send to your client.</p></div>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:72px">
+<h2 style="margin:0 0 32px;font-size:32px;font-weight:600">What we check</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+<div class="card"><h3 style="margin:0 0 8px;font-size:18px">Subdomains</h3><p style="margin:0;color:#4A5568">New subdomains appearing in certificate transparency logs and DNS.</p></div>
+<div class="card"><h3 style="margin:0 0 8px;font-size:18px">Dangling DNS</h3><p style="margin:0;color:#4A5568">CNAME records that point at services nobody has claimed.</p></div>
+<div class="card"><h3 style="margin:0 0 8px;font-size:18px">Email authentication</h3><p style="margin:0;color:#4A5568">Whether SPF and DMARC records are present.</p></div>
+<div class="card"><h3 style="margin:0 0 8px;font-size:18px">TLS certificates</h3><p style="margin:0;color:#4A5568">Expiry dates and certificate chain validity.</p></div>
+<div class="card"><h3 style="margin:0 0 8px;font-size:18px">Security headers</h3><p style="margin:0;color:#4A5568">HSTS, CSP and other response headers, plus the HTTP-to-HTTPS redirect.</p></div>
+<div class="card"><h3 style="margin:0 0 8px;font-size:18px">Domain expiry</h3><p style="margin:0;color:#4A5568">Registration expiry dates, so a lapsed domain never surprises a client.</p></div>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:72px">
+<h2 style="margin:0 0 32px;font-size:32px;font-weight:600">Pricing</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:800px">
+<div class="card"><h3 style="margin:0;font-size:20px">Starter</h3><div style="font-size:44px;font-weight:600;margin:8px 0">$15<span style="font-size:18px;font-weight:400;color:#4A5568"> /month</span></div><ul style="margin:16px 0 24px;padding-left:20px;color:#4A5568"><li>Up to 3 domains</li><li>Weekly checks and change alerts</li><li>One-page PDF report per domain</li></ul><a class="btn" href="/app.html">Reserve Starter</a></div>
+<div class="card"><h3 style="margin:0;font-size:20px">Agency</h3><div style="font-size:44px;font-weight:600;margin:8px 0">$29<span style="font-size:18px;font-weight:400;color:#4A5568"> /month</span></div><ul style="margin:16px 0 24px;padding-left:20px;color:#4A5568"><li>Up to 10 domains</li><li>Everything in Starter</li><li>Your logo on client reports</li></ul><a class="btn" href="/app.html">Reserve Agency</a></div>
+</div>
+<p style="margin:24px 0 0;color:#4A5568">Reserve now. [Add your billing start date]</p>
+</section>
+
+<section class="wrap" style="padding-bottom:72px">
+<h2 style="margin:0 0 32px;font-size:32px;font-weight:600">Questions</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+<div class="card"><h3 style="margin:0 0 8px;font-size:18px">Do you scan sites I don’t own?</h3><p style="margin:0;color:#4A5568">No. A domain is checked only after you prove control with a DNS TXT record.</p></div>
+<div class="card"><h3 style="margin:0 0 8px;font-size:18px">Is this a penetration test?</h3><p style="margin:0;color:#4A5568">No. It’s a weekly health check of public-facing basics. It doesn’t replace a penetration test or a security audit.</p></div>
+<div class="card"><h3 style="margin:0 0 8px;font-size:18px">What data do you keep?</h3><p style="margin:0;color:#4A5568">Your account email, the domains you add, and the weekly results for each. [Add your retention period]</p></div>
+<div class="card"><h3 style="margin:0 0 8px;font-size:18px">Can I add my own logo?</h3><p style="margin:0;color:#4A5568">Yes, on the Agency plan. Reports go to your client under your name.</p></div>
+</div>
+</section>
+
+<section style="background:#0F1B2D;color:#fff;padding:80px 24px;text-align:center">
+<h2 style="margin:0 0 16px;font-size:36px;font-weight:600">Reserve your spot</h2>
+<p style="margin:0 auto 32px;max-width:520px;color:#C9D3E0;font-size:18px">Stop finding out about expired certificates and forgotten subdomains from your clients.</p>
+<a class="btn" href="/app.html" style="background:#fff;color:#0F1B2D">Reserve your spot</a>
+</section>
+
+<footer class="wrap" style="padding-top:32px;padding-bottom:32px;color:#4A5568;font-size:14px">© 2026 ClientSiteWatch · [Contact email] · [Terms] · [Privacy]</footer>
+
+</div>
+</body></html>

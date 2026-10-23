@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ClientSiteWatch</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css"></head><body>
+<header><a href="/">ClientSiteWatch</a><span id="who"></span><a id="adminlink" href="/admin.html" hidden>Admin</a><button id="out" class="alt" hidden>Log out</button></header>
+<main>
+<section id="auth" hidden><h1>Sign in</h1>
+<label>Email<input id="email" type="email" autocomplete="username"></label>
+<label>Password (10 characters or more)<input id="pw" type="password" autocomplete="current-password"></label>
+<p id="msg" role="alert"></p><button id="login">Log in</button> <button id="reg" class="alt">Create account</button></section>
+<section id="dash" hidden><h1>Your domains</h1>
+<form id="add"><input id="dn" placeholder="example.com" aria-label="Domain name"><button>Add domain</button></form>
+<p id="err" role="alert"></p><div id="list"></div></section>
+</main><script src="/app.js"></script></body></html>
